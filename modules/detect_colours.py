@@ -53,7 +53,7 @@ class DetectBlue:
 
         # Apply the threshold for the colour detection
         mask = cv2.inRange(hsv, lower_blue, upper_blue)
-        #lol
+        # lol
         # Shows the detected colour from the mask
         res = cv2.bitwise_and(img, img, mask=mask)
 
@@ -69,7 +69,7 @@ class DetectBlue:
         cv2.imwrite(str(output_path), img)
 
         # Show res to see the result of what is being filtered in the colour detection
-        #cv2.imwrite(str(output_path), res)
+        # cv2.imwrite(str(output_path), res)
 
         # This parameter is needed to run tests
         return mask if return_mask else None
@@ -92,7 +92,7 @@ class DetectRed:
 
     def __init__(self, class_create_private_key: object) -> None:
         """
-        Private constructor, use create() method. 
+        Private constructor, use create() method.
         """
         assert class_create_private_key is DetectRed.__create_key, "Use create() method"
 
@@ -142,7 +142,7 @@ class DetectRed:
         cv2.imwrite(str(output_path), img)
 
         # Show res to see the result of what is being filtered in the colour detection
-        #cv2.imwrite(str(output_path), res)
+        # cv2.imwrite(str(output_path), res)
 
         # ============
         # ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓

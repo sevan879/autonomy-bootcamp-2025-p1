@@ -53,9 +53,6 @@ class DetectBlue:
 
         # Apply the threshold for the colour detection
         mask = cv2.inRange(hsv, lower_blue, upper_blue)
-        # lol
-        # Shows the detected colour from the mask
-        res = cv2.bitwise_and(img, img, mask=mask)
 
         # ============
         # ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -124,9 +121,6 @@ class DetectRed:
         mask1 = cv2.inRange(hsv, lower_red1, upper_red1)
         mask2 = cv2.inRange(hsv, lower_red2, upper_red2)
         finalmask = cv2.bitwise_or(mask1, mask2)
-
-        # Shows the detected colour from the mask
-        res = cv2.bitwise_and(img, img, mask=finalmask)
 
         # Annotate the colour detections
         # replace the '_' parameter with the appropiate variable

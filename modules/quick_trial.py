@@ -4,9 +4,6 @@ Runs colour detection on sample image.
 
 import pathlib
 import time
-import cv2
-import numpy as np
-
 from detect_colours import DetectBlue, DetectRed
 
 
